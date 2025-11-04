@@ -39,6 +39,24 @@ header {
     font-size: 2rem;
     color: #1e3c72;
     font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.logo-text {
+    display: none;
+}
+
+/* Show text logo if image fails to load */
+.logo:not(:has(img)), .logo:has(img[src=""]) .logo-text {
+    display: flex;
 }
 
 .school-info h1 {

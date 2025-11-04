@@ -9,7 +9,12 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">MS</div>
+            <div class="logo">
+                <!-- Replace with actual logo image -->
+                <img src="images/logo.png" alt="School Logo" class="logo-img">
+                <!-- If no logo image yet, shows "MS" text -->
+                <span class="logo-text">MS</span>
+            </div>
             <div class="school-info">
                 <h1>PM Shri Middle School Hiranpur Boys</h1>
                 <p>PM ScHools for Rising India | Excellence in Education Since 1912</p>
@@ -25,6 +30,7 @@
                 <li><a href="#about" onclick="closeMenu()">About Us</a></li>
                 <li><a href="#academics" onclick="closeMenu()">Academics</a></li>
                 <li><a href="#facilities" onclick="closeMenu()">Facilities</a></li>
+                <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
                 <li><a href="#achievements" onclick="closeMenu()">Achievements</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
@@ -32,14 +38,28 @@
     </nav>
 
     <div class="hero" id="home">
-        <h2>Welcome to PM Shri Middle School Hiranpur Boys</h2>
-        <p>Empowering young minds with quality education and values for over 112 years</p>
+        <div class="hero-content">
+            <h2>Welcome to PM Shri Middle School Hiranpur Boys</h2>
+            <p>Empowering young minds with quality education and values for over 112 years</p>
+        </div>
+        <!-- Optional: Add school building image as hero background -->
+        <!-- Background image can be set in CSS -->
     </div>
 
     <div class="container">
         <section class="section" id="about">
             <h2>About Our School</h2>
-            <p>PM Shri Middle School Hiranpur Boys is a historic educational institution established in 1912, with over a century of excellence in education. We provide quality education from Class 1 to Class 8, nurturing young minds and building strong foundations for their future. Our school is proud to be recognized as a PM Shri School, showcasing the implementation of the National Education Policy 2020 and serving as an exemplar institution providing holistic, equitable, and joyful education.</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>PM Shri Middle School Hiranpur Boys is a historic educational institution established in 1912, with over a century of excellence in education. We provide quality education from Class 1 to Class 8, nurturing young minds and building strong foundations for their future. Our school is proud to be recognized as a PM Shri School, showcasing the implementation of the National Education Policy 2020 and serving as an exemplar institution providing holistic, equitable, and joyful education.</p>
+                </div>
+                
+                <!-- School Building Image -->
+                <div class="about-image">
+                    <img src="images/school-building.jpg" alt="School Building" class="featured-image">
+                </div>
+            </div>
             
             <div class="info-grid">
                 <div class="info-item">
@@ -97,24 +117,66 @@
             <h2>Our Facilities</h2>
             <div class="cards">
                 <div class="card">
+                    <div class="card-image">
+                        <img src="images/classroom.jpg" alt="Classroom" class="facility-img">
+                    </div>
                     <div class="card-icon">🏫</div>
                     <h3>Classrooms</h3>
                     <p>Well-ventilated and spacious classrooms with modern teaching aids and comfortable seating arrangements.</p>
                 </div>
                 <div class="card">
+                    <div class="card-image">
+                        <img src="images/library.jpg" alt="Library" class="facility-img">
+                    </div>
                     <div class="card-icon">📖</div>
                     <h3>Library</h3>
                     <p>Well-stocked library with diverse collection of books, periodicals, and digital resources.</p>
                 </div>
                 <div class="card">
+                    <div class="card-image">
+                        <img src="images/sports.jpg" alt="Sports Ground" class="facility-img">
+                    </div>
                     <div class="card-icon">⚽</div>
                     <h3>Sports Ground</h3>
                     <p>Playground and sports facilities for cricket, football, volleyball, and other physical activities.</p>
                 </div>
                 <div class="card">
+                    <div class="card-image">
+                        <img src="images/lab.jpg" alt="Computer Lab" class="facility-img">
+                    </div>
                     <div class="card-icon">💻</div>
                     <h3>Computer Lab</h3>
                     <p>Modern computer laboratory for digital literacy and technology education.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/students.jpg" alt="Students">
+                    <div class="gallery-caption">Our Students</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/classroom.jpg" alt="Classroom">
+                    <div class="gallery-caption">Classroom</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/library.jpg" alt="Library">
+                    <div class="gallery-caption">Library</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sports.jpg" alt="Sports">
+                    <div class="gallery-caption">Sports Activities</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lab.jpg" alt="Computer Lab">
+                    <div class="gallery-caption">Computer Lab</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/school-building.jpg" alt="School Building">
+                    <div class="gallery-caption">School Building</div>
                 </div>
             </div>
         </section>
