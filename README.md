@@ -116,8 +116,7 @@ vercel
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/pm-shri-hiranpur-boys.git
-cd pm-shri-hiranpur-boys
+git clone (https://github.com/RohanShill/School-Website/tree/main)
 ```
 
 2. **Open the website**
