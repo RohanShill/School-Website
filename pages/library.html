@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - PM Shri Middle School Hiranpur Boys</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .facility-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .facility-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+
+        .breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .facility-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .facility-intro {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .facility-intro h2 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-image {
+            position: relative;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-image .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            text-align: center;
+        }
+
+        .collection-list {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .collection-list h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .collection-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .collection-list li {
+            padding: 0.75rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .collection-list li:last-child {
+            border-bottom: none;
+        }
+
+        .collection-list li::before {
+            content: "📚";
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .timing-box {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 2rem;
+            border-radius: 5px;
+            margin: 2rem 0;
+        }
+
+        .timing-box h3 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #2a5298;
+        }
+
+        @media (max-width: 768px) {
+            .facility-header h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid, .image-gallery, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="../index.html">🏠 Home</a> / 
+        <a href="../index.html#facilities">Facilities</a> / 
+        <span>Library</span>
+    </div>
+
+    <!-- Facility Header -->
+    <div class="facility-header">
+        <h1>📚 School Library</h1>
+        <p>A Gateway to Knowledge and Learning</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="facility-content">
+        
+        <!-- Introduction -->
+        <div class="facility-intro">
+            <h2>About Our Library</h2>
+            <p>Our school library is a treasure trove of knowledge, housing a diverse collection of books, reference materials, magazines, and educational resources. The library serves as a quiet sanctuary where students can explore the world of books, develop reading habits, and enhance their learning beyond the classroom.</p>
+            <p>We believe that reading is fundamental to education, and our library is designed to inspire curiosity, imagination, and a lifelong love for learning among our students.</p>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Books Available</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Seating Capacity</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Magazines & Journals</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Newspapers</div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <h2 style="color: #1e3c72; margin-bottom: 1rem;">Library Features</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <div class="feature-icon">📖</div>
+                <h3>Diverse Collection</h3>
+                <p>Books on various subjects including literature, science, history, and more</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🪑</div>
+                <h3>Reading Area</h3>
+                <p>Comfortable seating arrangement for peaceful reading</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📰</div>
+                <h3>Periodicals</h3>
+                <p>Latest newspapers, magazines, and educational journals</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔍</div>
+                <h3>Reference Section</h3>
+                <p>Dictionaries, encyclopedias, and reference books</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">👨‍💼</div>
+                <h3>Librarian Support</h3>
+                <p>Trained librarian to assist students in finding books</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔄</div>
+                <h3>Book Lending</h3>
+                <p>Easy book issue and return system for students</p>
+            </div>
+        </div>
+
+        <!-- Book Collection Categories -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">Book Collection</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="collection-list">
+                <h3>Academic Books</h3>
+                <ul>
+                    <li>Textbooks for all classes</li>
+                    <li>Reference books for subjects</li>
+                    <li>Practice workbooks</li>
+                    <li>Solved question papers</li>
+                </ul>
+            </div>
+            <div class="collection-list">
+                <h3>Story Books</h3>
+                <ul>
+                    <li>Hindi story books</li>
+                    <li>English story books</li>
+                    <li>Fairy tales and fables</li>
+                    <li>Adventure stories</li>
+                </ul>
+            </div>
+            <div class="collection-list">
+                <h3>General Knowledge</h3>
+                <ul>
+                    <li>Encyclopedia</li>
+                    <li>Science books</li>
+                    <li>History books</li>
+                    <li>Geography atlases</li>
+                </ul>
+            </div>
+            <div class="collection-list">
+                <h3>Magazines & More</h3>
+                <ul>
+                    <li>Children's magazines</li>
+                    <li>Educational journals</li>
+                    <li>Daily newspapers</li>
+                    <li>Comics and picture books</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Library Timings -->
+        <div class="timing-box">
+            <h3>📅 Library Timings</h3>
+            <p><strong>Monday to Friday:</strong> 9:30 AM - 2:30 PM</p>
+            <p style="margin-top: 0.5rem;"><strong>During School Hours:</strong> Students can visit during free periods or library periods</p>
+            <p style="margin-top: 1rem; font-style: italic;">Note: Library remains closed on Saturdays, Sundays, and school holidays</p>
+        </div>
+
+        <!-- Library Rules -->
+        <div class="facility-intro" style="margin-top: 3rem;">
+            <h2>Library Rules & Guidelines</h2>
+            <ul style="margin-top: 1rem; line-height: 2;">
+                <li>✓ Maintain complete silence in the library</li>
+                <li>✓ Handle books with care</li>
+                <li>✓ Return books on time (within 7 days)</li>
+                <li>✓ Do not write or mark in library books</li>
+                <li>✓ Keep your library card safe</li>
+                <li>✓ No eating or drinking inside the library</li>
+                <li>✓ Place books back properly after reading</li>
+                <li>✓ Report any damaged books to the librarian</li>
+            </ul>
+        </div>
+
+        <!-- Photo Gallery -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">Library Gallery</h2>
+        <div class="image-gallery">
+            <div class="gallery-image">
+                <img src="../images/facilities/library-1.jpg" alt="Library View 1">
+                <div class="caption">Library Reading Area</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/library-2.jpg" alt="Library View 2">
+                <div class="caption">Book Collection</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/library-3.jpg" alt="Library View 3">
+                <div class="caption">Students Reading</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/library-4.jpg" alt="Library View 4">
+                <div class="caption">Reference Section</div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div style="text-align: center;">
+            <a href="../index.html#facilities" class="back-button">← Back to Facilities</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>&copy; 2024 PM Shri Middle School Hiranpur Boys. All rights reserved.</p>
+    </footer>
+</body>
+</html>

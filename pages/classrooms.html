@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classrooms - PM Shri Middle School Hiranpur Boys</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .facility-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .facility-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+
+        .breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .facility-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .facility-intro {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .facility-intro h2 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-image {
+            position: relative;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-image .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            text-align: center;
+        }
+
+        .specs-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .specs-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table th {
+            background: #1e3c72;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .specs-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .specs-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #2a5298;
+        }
+
+        @media (max-width: 768px) {
+            .facility-header h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid, .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="../index.html">🏠 Home</a> / 
+        <a href="../index.html#facilities">Facilities</a> / 
+        <span>Classrooms</span>
+    </div>
+
+    <!-- Facility Header -->
+    <div class="facility-header">
+        <h1>🏫 Our Classrooms</h1>
+        <p>Modern Learning Spaces for Quality Education</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="facility-content">
+        
+        <!-- Introduction -->
+        <div class="facility-intro">
+            <h2>About Our Classrooms</h2>
+            <p>Our school features well-designed, spacious classrooms that provide an ideal learning environment for students from Class 1 to Class 8. Each classroom is equipped with modern teaching aids and comfortable seating arrangements to facilitate effective learning and student engagement.</p>
+            <p>We maintain a student-friendly atmosphere with proper lighting, ventilation, and safety measures to ensure that every child can learn in comfort and focus on their education.</p>
+        </div>
+
+        <!-- Features -->
+        <h2 style="color: #1e3c72; margin-bottom: 1rem;">Classroom Features</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <div class="feature-icon">💡</div>
+                <h3>Proper Lighting</h3>
+                <p>Natural and artificial lighting for comfortable studying throughout the day</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🪑</div>
+                <h3>Comfortable Seating</h3>
+                <p>Ergonomic desks and benches suitable for different age groups</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🌬️</div>
+                <h3>Ventilation</h3>
+                <p>Well-ventilated rooms with windows ensuring fresh air circulation</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📊</div>
+                <h3>Teaching Aids</h3>
+                <p>Blackboards, charts, maps, and educational posters</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🧹</div>
+                <h3>Clean Environment</h3>
+                <p>Daily cleaning and maintenance for hygiene</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">👥</div>
+                <h3>Optimal Class Size</h3>
+                <p>Appropriate student-teacher ratio for better learning</p>
+            </div>
+        </div>
+
+        <!-- Specifications -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">Classroom Specifications</h2>
+        <div class="specs-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Specification</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Total Classrooms</strong></td>
+                        <td>8 classrooms (Class 1 to Class 8)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Average Classroom Size</strong></td>
+                        <td>30 x 25 feet</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seating Capacity</strong></td>
+                        <td>40-50 students per classroom</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Furniture</strong></td>
+                        <td>Wooden desks and benches, teacher's table and chair</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teaching Equipment</strong></td>
+                        <td>Blackboard, chalk, duster, educational charts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lighting</strong></td>
+                        <td>Natural light + tube lights/LED bulbs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ventilation</strong></td>
+                        <td>Large windows with proper cross-ventilation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maintenance</strong></td>
+                        <td>Daily cleaning, periodic painting and repairs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Photo Gallery -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">Classroom Gallery</h2>
+        <div class="image-gallery">
+            <div class="gallery-image">
+                <img src="../images/facilities/classroom-1.jpg" alt="Classroom View 1">
+                <div class="caption">Primary Section Classroom</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/classroom-2.jpg" alt="Classroom View 2">
+                <div class="caption">Middle Section Classroom</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/classroom-3.jpg" alt="Classroom View 3">
+                <div class="caption">Students in Class</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/classroom-4.jpg" alt="Classroom View 4">
+                <div class="caption">Teaching in Progress</div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="facility-intro" style="margin-top: 3rem;">
+            <h2>Learning Environment</h2>
+            <p>Our classrooms are designed to create a positive and engaging learning atmosphere. Teachers use various teaching methodologies including:</p>
+            <ul style="margin-top: 1rem; line-height: 2;">
+                <li>Interactive teaching methods</li>
+                <li>Group discussions and activities</li>
+                <li>Visual aids and demonstrations</li>
+                <li>Practical examples and real-life applications</li>
+                <li>Student participation and question-answer sessions</li>
+            </ul>
+        </div>
+
+        <!-- Back Button -->
+        <div style="text-align: center;">
+            <a href="../index.html#facilities" class="back-button">← Back to Facilities</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>&copy; 2024 PM Shri Middle School Hiranpur Boys. All rights reserved.</p>
+    </footer>
+</body>
+</html>

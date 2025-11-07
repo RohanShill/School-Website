@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Lab - PM Shri Middle School Hiranpur Boys</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .facility-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .facility-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+
+        .breadcrumb a {
+            color: #1e3c72;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .facility-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .facility-intro {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .facility-intro h2 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-image {
+            position: relative;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-image .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            text-align: center;
+        }
+
+        .software-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .software-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .software-item h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .curriculum-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .curriculum-box h3 {
+            margin-bottom: 1rem;
+        }
+
+        .curriculum-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .curriculum-box li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .curriculum-box li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #2a5298;
+        }
+
+        @media (max-width: 768px) {
+            .facility-header h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid, .image-gallery, .stats-grid, .software-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <a href="../index.html">🏠 Home</a> / 
+        <a href="../index.html#facilities">Facilities</a> / 
+        <span>Computer Lab</span>
+    </div>
+
+    <!-- Facility Header -->
+    <div class="facility-header">
+        <h1>💻 Computer Laboratory</h1>
+        <p>Empowering Digital Learning and Technology Education</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="facility-content">
+        
+        <!-- Introduction -->
+        <div class="facility-intro">
+            <h2>About Our Computer Lab</h2>
+            <p>Our state-of-the-art computer laboratory provides students with hands-on experience in computer education and digital literacy. Equipped with modern computers and educational software, the lab serves as a gateway to the digital world, preparing students for the technology-driven future.</p>
+            <p>We focus on building fundamental computer skills, logical thinking, and problem-solving abilities through practical learning and interactive sessions.</p>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Computers</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1:2</div>
+                <div class="stat-label">Student-PC Ratio</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">Internet</div>
+                <div class="stat-label">Connected Lab</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">Digital</div>
+                <div class="stat-label">Classroom</div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <h2 style="color: #1e3c72; margin-bottom: 1rem;">Lab Features</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🖥️</div>
+                <h3>Modern Computers</h3>
+                <p>Latest desktop computers with updated configurations</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🌐</div>
+                <h3>Internet Access</h3>
+                <p>High-speed internet for online learning resources</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📺</div>
+                <h3>Projector</h3>
+                <p>Digital projector for interactive demonstrations</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🖨️</div>
+                <h3>Printer</h3>
+                <p>Printing facility for student assignments</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🏫</div>
+                <h3>Smart Classroom</h3>
+                <p>SmartClass Room For Learning</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>Trained Instructor</h3>
+                <p>Qualified computer teacher for guidance</p>
+            </div>
+        </div>
+
+        <!-- Software & Tools -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">Available Software & Tools</h2>
+        <div class="software-list">
+            <div class="software-item">
+                <h4>Operating System</h4>
+                <p>Windows 10/11 for easy learning</p>
+            </div>
+            <div class="software-item">
+                <h4>MS Office Suite</h4>
+                <p>Word, Excel, PowerPoint for productivity</p>
+            </div>
+            <div class="software-item">
+                <h4>Educational Software</h4>
+                <p>Age-appropriate learning applications</p>
+            </div>
+            <div class="software-item">
+                <h4>Web Browsers</h4>
+                <p>Chrome, Firefox for internet browsing</p>
+            </div>
+            <div class="software-item">
+                <h4>Paint & Drawing</h4>
+                <p>Paint, Tux Paint for creative activities</p>
+            </div>
+            <div class="software-item">
+                <h4>Coding Tools</h4>
+                <p>Scratch for basic programming concepts</p>
+            </div>
+        </div>
+
+        <!-- Curriculum -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">What Students Learn</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="curriculum-box">
+                <h3>Basic Skills (Class 1-3)</h3>
+                <ul>
+                    <li>Computer parts identification</li>
+                    <li>Mouse and keyboard handling</li>
+                    <li>Basic Paint and drawing</li>
+                    <li>Simple typing practice</li>
+                    <li>Educational games</li>
+                </ul>
+            </div>
+            <div class="curriculum-box">
+                <h3>Intermediate Skills (Class 4-6)</h3>
+                <ul>
+                    <li>MS Word basics</li>
+                    <li>Internet basics and browsing</li>
+                    <li>Email and communication</li>
+                    <li>Basic PowerPoint presentations</li>
+                    <li>Typing speed improvement</li>
+                </ul>
+            </div>
+            <div class="curriculum-box">
+                <h3>Advanced Skills (Class 7-8)</h3>
+                <ul>
+                    <li>MS Excel spreadsheets</li>
+                    <li>Advanced PowerPoint</li>
+                    <li>Internet research skills</li>
+                    <li>Basic coding (Scratch)</li>
+                    <li>Digital citizenship</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lab Rules -->
+        <div class="facility-intro" style="margin-top: 3rem;">
+            <h2>Computer Lab Rules</h2>
+            <ul style="margin-top: 1rem; line-height: 2;">
+                <li>✓ Enter the lab only with permission</li>
+                <li>✓ Handle computers and peripherals carefully</li>
+                <li>✓ No eating or drinking in the lab</li>
+                <li>✓ Use computers only for educational purposes</li>
+                <li>✓ Report any technical issues immediately</li>
+                <li>✓ Do not change system settings</li>
+                <li>✓ Save your work regularly</li>
+                <li>✓ Shut down computers properly after use</li>
+                <li>✓ Maintain cleanliness in the lab</li>
+                <li>✓ Follow internet safety guidelines</li>
+            </ul>
+        </div>
+
+        <!-- Photo Gallery -->
+        <h2 style="color: #1e3c72; margin: 3rem 0 1rem;">Computer Lab Gallery</h2>
+        <div class="image-gallery">
+            <div class="gallery-image">
+                <img src="../images/facilities/lab-1.jpg" alt="Computer Lab View 1">
+                <div class="caption">Computer Lab Overview</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/lab-2.jpg" alt="Computer Lab View 2">
+                <div class="caption">Students Learning</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/lab-3.jpg" alt="Computer Lab View 3">
+                <div class="caption">Computer Workstations</div>
+            </div>
+            <div class="gallery-image">
+                <img src="../images/facilities/lab-4.jpg" alt="Computer Lab View 4">
+                <div class="caption">Practical Session</div>
+            </div>
+        </div>
+
+        <!-- Lab Timings -->
+        <div style="background: #e3f2fd; border-left: 4px solid #2196f3; padding: 2rem; border-radius: 5px; margin: 2rem 0;">
+            <h3 style="color: #1976d2; margin-bottom: 1rem;">⏰ Lab Schedule</h3>
+            <p><strong>Classes:</strong> Each class gets 2 computer periods per week</p>
+            <p style="margin-top: 0.5rem;"><strong>Duration:</strong> 40 minutes per period</p>
+            <p style="margin-top: 0.5rem;"><strong>Timings:</strong> During school hours (9:00 AM - 3:00 PM)</p>
+        </div>
+
+        <!-- Back Button -->
+        <div style="text-align: center;">
+            <a href="../index.html#facilities" class="back-button">← Back to Facilities</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>&copy; 2024 PM Shri Middle School Hiranpur Boys. All rights reserved.</p>
+    </footer>
+</body>
+</html>
