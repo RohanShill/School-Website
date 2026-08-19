@@ -13,22 +13,22 @@ export default function NoticeTicker() {
   if (!notices || notices.length === 0) return null;
 
   return (
-    <div className="border-b border-slate-200 bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navy text-white py-2.5 px-4 shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+    <div className="w-full max-w-full overflow-hidden border-b border-slate-200 bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navy text-white py-2.5 px-3 sm:px-4 shadow-sm">
+      <div className="mx-auto flex max-w-7xl w-full items-center justify-between gap-2.5 sm:gap-4">
         {/* Left Badge */}
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <span className="flex h-2.5 w-2.5 relative">
+        <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+          <span className="flex h-2 w-2 sm:h-2.5 sm:w-2.5 relative">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-red-500"></span>
           </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/20 border border-red-500/30 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-red-300">
-            <Megaphone size={12} className="text-red-400" />
+          <span className="inline-flex items-center gap-1 rounded-full bg-red-500/20 border border-red-500/30 px-2 py-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-red-300">
+            <Megaphone size={11} className="text-red-400" />
             {language === 'hi' ? 'ताज़ा सूचना' : 'Flash Notice'}
           </span>
         </div>
 
         {/* Ticker Content */}
-        <div className="overflow-hidden relative flex-1 text-xs sm:text-sm">
+        <div className="overflow-hidden relative flex-1 min-w-0 text-xs sm:text-sm">
           <div className="flex items-center gap-8 animate-[marquee_22s_linear_infinite] whitespace-nowrap">
             {[...notices, ...notices].map((notice, idx) => (
               <Link

@@ -30,15 +30,15 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/90 bg-white/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-clip border-b border-slate-200/90 bg-white/95 backdrop-blur-md">
       {/* Top Header Bar with Contacts, Location & Language Switcher */}
-      <div className="border-b border-slate-700/40 bg-brand-navy text-xs text-slate-200">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-3 sm:px-6 py-2 gap-2">
+      <div className="w-full border-b border-slate-700/40 bg-brand-navy text-xs text-slate-200">
+        <div className="mx-auto flex max-w-7xl w-full items-center justify-between px-3 sm:px-6 py-2 gap-2">
           {/* Quick Call & Email (Clickable on Phone) */}
-          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs">
+          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs min-w-0">
             <a
               href={`tel:${schoolData.school.phone}`}
-              className="inline-flex items-center gap-1.5 hover:text-brand-gold transition"
+              className="inline-flex items-center gap-1.5 hover:text-brand-gold transition flex-shrink-0"
               title="Call School"
             >
               <Phone size={13} className="text-brand-gold" />
@@ -47,20 +47,20 @@ export default function Navbar() {
             </a>
             <a
               href={`mailto:${schoolData.school.email}`}
-              className="hidden sm:inline-flex items-center gap-1.5 hover:text-brand-gold transition"
+              className="hidden sm:inline-flex items-center gap-1.5 hover:text-brand-gold transition truncate"
               title="Email School"
             >
-              <Mail size={13} className="text-brand-gold" />
-              <span>{schoolData.school.email}</span>
+              <Mail size={13} className="text-brand-gold flex-shrink-0" />
+              <span className="truncate">{schoolData.school.email}</span>
             </a>
-            <span className="hidden md:inline-flex items-center gap-1 text-slate-400">
+            <span className="hidden md:inline-flex items-center gap-1 text-slate-400 flex-shrink-0">
               <MapPin size={12} className="text-brand-gold" />
               {language === 'hi' ? 'पाकुड़, झारखंड' : 'Pakur, Jharkhand'}
             </span>
           </div>
 
           {/* Language Switcher Pill */}
-          <div className="inline-flex items-center gap-1 rounded-full bg-white/10 p-0.5 border border-white/20 text-[11px] sm:text-xs">
+          <div className="inline-flex items-center gap-1 rounded-full bg-white/10 p-0.5 border border-white/20 text-[11px] sm:text-xs flex-shrink-0">
             <span className="pl-1.5 pr-0.5 text-slate-300 flex items-center">
               <Globe size={12} className="text-brand-gold" />
             </span>
@@ -93,9 +93,9 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation Bar */}
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3">
+      <nav className="mx-auto flex max-w-7xl w-full items-center justify-between px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3">
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-1 max-w-[80%] sm:max-w-none">
+        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group flex-1 min-w-0 pr-2">
           <div className="relative h-10 w-10 sm:h-12 sm:w-12 overflow-hidden rounded-full border border-slate-200 bg-white shadow-xs flex-shrink-0 group-hover:scale-105 transition">
             <Image src="/images/logo.png" alt="School Logo" fill className="object-contain p-1" priority />
           </div>

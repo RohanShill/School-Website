@@ -34,12 +34,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-slate-50 text-slate-800 antialiased">
+    <html lang="en" className="overflow-x-hidden max-w-full">
+      <body className="bg-slate-50 text-slate-800 antialiased overflow-x-hidden w-full max-w-full min-h-screen flex flex-col">
         <LanguageProvider>
           <NoticeProvider>
             <Navbar />
-            <main>{children}</main>
+            <main className="flex-1 w-full max-w-full overflow-x-hidden">{children}</main>
             <Footer />
             <AdminNoticeModal />
           </NoticeProvider>
