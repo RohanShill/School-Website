@@ -195,12 +195,14 @@ export default function HomePage() {
             </blockquote>
             <div className="mt-6 flex items-center gap-3.5">
               <div className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-brand-gold text-base sm:text-lg font-bold text-brand-navy">
-                VK
+                EK
               </div>
               <div>
-                <p className="font-bold text-sm sm:text-base">{schoolData.school.principal}</p>
+                <p className="font-bold text-sm sm:text-base">
+                  {language === 'hi' ? schoolData.school.principalHindi : schoolData.school.principal}
+                </p>
                 <p className="text-xs text-slate-300">
-                  {language === 'hi' ? 'प्रधानाध्यापक / हेडमास्टर' : 'Principal'}
+                  {language === 'hi' ? 'प्रधानाध्यापिका / हेडमिस्ट्रेस' : 'Principal / Headmistress'}
                 </p>
               </div>
             </div>
