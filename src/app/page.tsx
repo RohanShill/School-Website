@@ -98,27 +98,27 @@ export default function HomePage() {
       <NoticeTicker />
 
       {/* Stats Section (2 cols on mobile, 4 on desktop) */}
-      <section className="py-12 sm:py-16">
-        <div className="section-shell">
-          <div className="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
+      <section className="py-10 sm:py-16 w-full max-w-full overflow-hidden">
+        <div className="section-shell w-full max-w-full overflow-hidden">
+          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div className="min-w-0 flex-1">
               <span className="badge-pill">{language === 'hi' ? 'उपलब्धियां' : 'Highlights'}</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy">
+              <h2 className="mt-2.5 sm:mt-3 text-xl sm:text-3xl md:text-4xl font-bold text-brand-navy break-words">
                 {language === 'hi' ? 'विद्यालय एक नज़र में' : 'Progress that speaks for itself'}
               </h2>
             </div>
-            <Link href="/about" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-brand-blue hover:underline">
+            <Link href="/about" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-brand-blue hover:underline flex-shrink-0">
               {language === 'hi' ? 'विस्तृत परिचय देखें' : 'See our story'} <ArrowRight size={15} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-3.5 sm:gap-6 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 xl:grid-cols-4 w-full">
             {schoolData.stats.map((stat) => (
-              <div key={stat.label} className="card-surface p-4 sm:p-6 text-center">
-                <div className="text-3xl sm:text-4xl font-black text-brand-blue">
-                  {stat.value}<span className="text-xl sm:text-2xl text-brand-gold">{stat.suffix || ''}</span>
+              <div key={stat.label} className="card-surface p-3.5 sm:p-6 text-center min-w-0 overflow-hidden">
+                <div className="text-2xl sm:text-4xl font-black text-brand-blue truncate">
+                  {stat.value}<span className="text-lg sm:text-2xl text-brand-gold">{stat.suffix || ''}</span>
                 </div>
-                <p className="mt-2 text-xs sm:text-sm font-medium text-slate-600 leading-snug">{stat.label}</p>
+                <p className="mt-1.5 sm:mt-2 text-[11px] sm:text-sm font-medium text-slate-600 leading-snug break-words">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -129,10 +129,10 @@ export default function HomePage() {
       <HomeNoticeBoard />
 
       {/* Why Parents Choose Us Section */}
-      <section className="bg-slate-100 py-12 sm:py-16">
-        <div className="section-shell">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] items-center">
-            <div className="card-surface overflow-hidden p-0 h-72 sm:h-96 lg:h-full min-h-[320px] relative rounded-3xl shadow-md group">
+      <section className="bg-slate-100 py-10 sm:py-16 w-full max-w-full overflow-hidden">
+        <div className="section-shell w-full max-w-full overflow-hidden">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.85fr_1.15fr] items-center w-full">
+            <div className="card-surface overflow-hidden p-0 h-64 sm:h-96 lg:h-full min-h-[260px] sm:min-h-[320px] relative rounded-2xl sm:rounded-3xl shadow-md group w-full">
               <Image
                 src="/images/why-choose-us.jpg"
                 alt="School Assembly and Flag Hoisting at PM SHRI Middle School Hiranpur"
@@ -142,32 +142,32 @@ export default function HomePage() {
                 className="object-cover group-hover:scale-105 transition duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="rounded-full bg-brand-gold text-brand-navy px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-white">
+                <span className="rounded-full bg-brand-gold text-brand-navy px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">
                   {language === 'hi' ? 'दैनिक प्रार्थना सभा एवं अनुशासन' : 'Morning Assembly & Discipline'}
                 </span>
-                <p className="mt-1.5 text-xs text-slate-200 font-medium">
+                <p className="mt-1 text-[11px] sm:text-xs text-slate-200 font-medium">
                   {language === 'hi' ? 'पीएम श्री मध्य विद्यालय हिरणपुर का अनुशासित परिसर' : 'Vibrant, patriotic campus life at PM SHRI Hiranpur'}
                 </p>
               </div>
             </div>
-            <div>
+            <div className="min-w-0 flex-1">
               <span className="badge-pill">{language === 'hi' ? 'अभिभावकों का विश्वास' : 'Why Parents Choose Us'}</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy leading-snug">
+              <h2 className="mt-2.5 sm:mt-3 text-xl sm:text-3xl md:text-4xl font-bold text-brand-navy leading-snug break-words">
                 {language === 'hi'
                   ? 'आधुनिक तकनीक, कुशल शिक्षक एवं सुरक्षित वातावरण'
                   : 'A campus designed for curiosity, confidence, and care'}
               </h2>
-              <div className="mt-6 grid gap-3 sm:gap-4 sm:grid-cols-2">
+              <div className="mt-4 sm:mt-6 grid gap-2.5 sm:gap-4 grid-cols-1 sm:grid-cols-2 w-full">
                 {featureCards.map(({ icon: Icon, title, titleHi, description }) => (
-                  <div key={title} className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
-                    <div className="mb-3 inline-flex rounded-xl bg-brand-blue/10 p-2.5 text-brand-blue">
-                      <Icon size={20} />
+                  <div key={title} className="rounded-xl sm:rounded-2xl border border-slate-200 bg-white p-3.5 sm:p-5 shadow-2xs min-w-0">
+                    <div className="mb-2.5 sm:mb-3 inline-flex rounded-xl bg-brand-blue/10 p-2 sm:p-2.5 text-brand-blue">
+                      <Icon size={18} />
                     </div>
-                    <h3 className="text-sm sm:text-base font-bold text-brand-navy">
+                    <h3 className="text-xs sm:text-base font-bold text-brand-navy break-words">
                       {language === 'hi' ? titleHi : title}
                     </h3>
-                    <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-slate-600">{description}</p>
+                    <p className="mt-1 sm:mt-1.5 text-[11px] sm:text-sm leading-relaxed text-slate-600 break-words">{description}</p>
                   </div>
                 ))}
               </div>
@@ -177,70 +177,70 @@ export default function HomePage() {
       </section>
 
       {/* Principal's Message Section */}
-      <section className="bg-brand-navy py-12 sm:py-16 text-white">
-        <div className="section-shell grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          <div>
-            <span className="badge-pill border-white/20 bg-white/10 text-white">
+      <section className="bg-brand-navy py-10 sm:py-16 text-white w-full max-w-full overflow-hidden">
+        <div className="section-shell grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center w-full max-w-full overflow-hidden">
+          <div className="min-w-0 flex-1">
+            <span className="badge-pill border-white/20 bg-white/10 text-white text-[11px]">
               {language === 'hi' ? 'प्रधानाध्यापक संदेश' : "Principal's Message"}
             </span>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-bold leading-snug">
+            <h2 className="mt-2.5 sm:mt-3 text-xl sm:text-3xl font-bold leading-snug break-words">
               {language === 'hi'
                 ? 'हमारा संकल्प: हर बच्चे का सर्वांगीण विकास'
                 : 'A school is more than academic achievement'}
             </h2>
-            <blockquote className="mt-4 sm:mt-6 border-l-4 border-brand-gold pl-4 text-sm sm:text-base leading-relaxed text-slate-200">
+            <blockquote className="mt-3 sm:mt-6 border-l-4 border-brand-gold pl-3 sm:pl-4 text-xs sm:text-base leading-relaxed text-slate-200 break-words">
               {language === 'hi'
                 ? '“हमारा उद्देश्य प्रत्येक छात्र को संस्कार, आधुनिक ज्ञान और आत्मविश्वास से समृद्ध करना है ताकि वे राष्ट्र निर्माण में अपना योगदान दे सकें।”'
                 : '“Our mission is to empower every child with values, imagination, and confidence — so they grow into responsible citizens and compassionate leaders.”'}
             </blockquote>
-            <div className="mt-6 flex items-center gap-3.5">
-              <div className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-brand-gold text-base sm:text-lg font-bold text-brand-navy">
+            <div className="mt-5 sm:mt-6 flex items-center gap-3 sm:gap-3.5">
+              <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-brand-gold text-sm sm:text-lg font-bold text-brand-navy flex-shrink-0">
                 EK
               </div>
-              <div>
-                <p className="font-bold text-sm sm:text-base">
+              <div className="min-w-0 flex-1">
+                <p className="font-bold text-xs sm:text-base truncate">
                   {language === 'hi' ? schoolData.school.principalHindi : schoolData.school.principal}
                 </p>
-                <p className="text-xs text-slate-300">
+                <p className="text-[11px] sm:text-xs text-slate-300 truncate">
                   {language === 'hi' ? 'प्रधानाध्यापिका / हेडमिस्ट्रेस' : 'Principal / Headmistress'}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="card-surface overflow-hidden border-white/10 bg-white/5 p-0 text-white h-60 sm:h-72 relative">
+          <div className="card-surface overflow-hidden border-white/10 bg-white/5 p-0 text-white h-52 sm:h-72 relative w-full rounded-2xl sm:rounded-3xl">
             <Image src="/images/school-building.jpg" alt="School" fill className="object-cover opacity-90" />
           </div>
         </div>
       </section>
 
       {/* Facilities & Academics Overview */}
-      <section className="py-12 sm:py-16">
-        <div className="section-shell">
-          <div className="mb-8">
+      <section className="py-10 sm:py-16 w-full max-w-full overflow-hidden">
+        <div className="section-shell w-full max-w-full overflow-hidden">
+          <div className="mb-6 sm:mb-8">
             <span className="badge-pill">{language === 'hi' ? 'सुविधाएं' : 'Facilities'}</span>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-bold text-brand-navy md:text-4xl">
+            <h2 className="mt-2.5 sm:mt-3 text-xl sm:text-3xl font-bold text-brand-navy md:text-4xl break-words">
               {language === 'hi' ? 'आधुनिक विद्यालय परिसर एवं सुविधाएं' : 'A comprehensive learning ecosystem'}
             </h2>
           </div>
-          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-3.5 sm:gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-full">
             {schoolData.facilities.slice(0, 4).map((facility) => (
-              <div key={facility.title} className="overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-soft">
-                <div className="relative h-40 sm:h-44">
+              <div key={facility.title} className="overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200 bg-white shadow-soft min-w-0">
+                <div className="relative h-36 sm:h-44 w-full">
                   <Image src={facility.image} alt={facility.title} fill className="object-cover" />
                 </div>
-                <div className="p-4 sm:p-5">
+                <div className="p-3.5 sm:p-5 min-w-0">
                   <div className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold ${facility.accent}`}>{facility.title}</div>
-                  <p className="mt-2.5 text-xs sm:text-sm leading-relaxed text-slate-600 line-clamp-3">{facility.description}</p>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600 line-clamp-3 break-words">{facility.description}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Link href="/academics" className="rounded-full bg-brand-blue px-6 py-2.5 text-center text-xs sm:text-sm font-bold text-white shadow-xs hover:bg-brand-royal transition">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-2.5 sm:gap-4">
+            <Link href="/academics" className="rounded-full bg-brand-blue px-5 sm:px-6 py-2.5 text-center text-xs sm:text-sm font-bold text-white shadow-xs hover:bg-brand-royal transition">
               {language === 'hi' ? 'पाठ्यक्रम व शिक्षण देखें' : 'Explore Academics'}
             </Link>
-            <Link href="/facilities" className="rounded-full border border-slate-300 bg-white px-6 py-2.5 text-center text-xs sm:text-sm font-bold text-brand-navy shadow-xs hover:bg-slate-50 transition">
+            <Link href="/facilities" className="rounded-full border border-slate-300 bg-white px-5 sm:px-6 py-2.5 text-center text-xs sm:text-sm font-bold text-brand-navy shadow-xs hover:bg-slate-50 transition">
               {language === 'hi' ? 'सभी सुविधाएं देखें' : 'View Campus Facilities'}
             </Link>
           </div>
@@ -248,16 +248,16 @@ export default function HomePage() {
       </section>
 
       {/* Featured Teachers & Leadership Showcase */}
-      <section className="py-12 sm:py-16 bg-slate-100 border-t border-slate-200">
-        <div className="section-shell">
-          <div className="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
+      <section className="py-10 sm:py-16 bg-slate-100 border-t border-slate-200 w-full max-w-full overflow-hidden">
+        <div className="section-shell w-full max-w-full overflow-hidden">
+          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div className="min-w-0 flex-1">
               <span className="badge-pill">{language === 'hi' ? 'शिक्षक गण' : 'Faculty & Mentors'}</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold text-brand-navy">
+              <h2 className="mt-2.5 sm:mt-3 text-xl sm:text-3xl md:text-4xl font-bold text-brand-navy break-words">
                 {language === 'hi' ? 'हमारे अनुभवी एवं समर्पित शिक्षक' : 'Our Qualified Educators & Mentors'}
               </h2>
             </div>
-            <Link href="/about" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-blue hover:underline">
+            <Link href="/about" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-blue hover:underline flex-shrink-0">
               {language === 'hi' ? 'सभी 12 शिक्षकों का परिचय देखें' : 'View Full Faculty Team'} <ArrowRight size={15} />
             </Link>
           </div>
